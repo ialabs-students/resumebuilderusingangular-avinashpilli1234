@@ -1,0 +1,242 @@
+<div *ngIf="!showResume" class="container">
+    <h2 style="text-align: center;">Resume Builder</h2>
+    <div class="container-fuild">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="" id="regForm" (submit)="saveFormData()">
+                    <div class="row">
+                        <div class="col-md-3"> 
+                            <div class="card">
+                                <div class="card-header">
+                                    <img class="card-img-top" src="../assets/profile_pic.png">
+                                    <button style="font-size:14px">Upload Picture <i class="fa fa-edit"></i></button>
+                                </div>
+        
+                                <div class="card-footer">
+                                    <p>Profile Picture</p>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-md-9">    
+                   <div class="jumbotron">
+                    <h2>Fill the basic details</h2><br>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="fname"> First Name</label>
+                            <input id="fname" type="text" name="fname" class="form-control"
+                                [(ngModel)]="formData.firstName">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="mname"> Middle Name</label>
+                            <input id="mname" type="text" name="mname" class="form-control"
+                                [(ngModel)]="formData.middleName">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="lname"> Last Name</label>
+                            <input id="lname" type="text" name="lname" class="form-control"
+                                [(ngModel)]="formData.lastName">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="email"> Email Id</label>
+                            <input id="email" type="text" name="email" class="form-control"
+                                [(ngModel)]="formData.email">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="phone">Phone number</label>
+                            <input id="phone" type="number" name="phone" class="form-control"
+                                [(ngModel)]="formData.phone">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="email">Website</label>
+                            <input id="web" type="text" name="web" class="form-control"
+                                [(ngModel)]="formData.web">
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="form-group col-md-12">
+                            <h3>Education Qualifications</h3>
+                        <table class="table">
+                        
+                            <tr>
+                        
+                                <th> Education </th>
+                        
+                                <th> School/University</th>
+                        
+                                <th> Year of Passing </th>
+                        
+                                <th> Percentage/CGPA </th>
+                        
+                            </tr>
+                            <tr>
+                        
+                                <td> <label> Post Graduation: </label> </td>
+                        
+                                <td> <input type="text" name="university1" placeholder="Enter School/University"
+                                        [(ngModel)]="formData.university11"> </td>
+                        
+                                <td> <input type="number" name="yearofpassing1" placeholder="Enter Year of Passing"
+                                        [(ngModel)]="formData.yearofpassing11"> </td>
+                        
+                                <td> <input type="number" name="percentage1" placeholder="Enter Percentage/CGPA"
+                                        [(ngModel)]="formData.percentage11"> </td>
+                        
+                            </tr>
+                            <tr>
+                        
+                                <td> <label> Graduation: </label> </td>
+                        
+                                <td> <input type="text" name="university2" placeholder="Enter School/University"
+                                        [(ngModel)]="formData.university21"> </td>
+                        
+                                <td> <input type="number" name="yearofpassing2" placeholder="Enter Year of Passing"
+                                        [(ngModel)]="formData.yearofpassing21"> </td>
+                        
+                                <td> <input type="number" name="percentage2" placeholder="Enter Percentage/CGPA"
+                                        [(ngModel)]="formData.percentage21"> </td>
+                        
+                            </tr>
+                            <tr>
+                        
+                                <td> <label> Intermidate: </label> </td>
+                        
+                                <td> <input type="text" name="university3" placeholder="Enter School/University"
+                                        [(ngModel)]="formData.university31"> </td>
+                        
+                                <td> <input type="number" name="yearofpassing3" placeholder="Enter Year of Passing"
+                                        [(ngModel)]="formData.yearofpassing31"> </td>
+                        
+                                <td> <input type="number" name="percentage3" placeholder="Enter Percentage/CGPA"
+                                        [(ngModel)]="formData.percentage31"> </td>
+                        
+                            </tr>
+                            <tr>
+                        
+                                <td> <label> High School: </label> </td>
+                        
+                                <td> <input type="text" name="university4" placeholder="Enter School/University"
+                                        [(ngModel)]="formData.university41"> </td>
+                        
+                                <td> <input type="number" name="yearofpassing4" placeholder="Enter Year of Passing"
+                                        [(ngModel)]="formData.yearofpassing41"> </td>
+                        
+                                <td> <input type="number" name="percentage4" placeholder="Enter Percentage/CGPA"
+                                        [(ngModel)]="formData.percentage41"> </td>
+                        
+                            </tr>
+                        
+                        
+                        
+                        </table>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="form-group col-md-12">
+                          <h3>Employment Details</h3>
+                        <table class="table">
+                        
+                            <tr>
+                        
+                                <th> Designation </th>
+                        
+                                <th> Organization </th>
+                        
+                                <th> Joining Date </th>
+                        
+                                <th> Relieving Date </th>
+                        
+                            </tr>
+                            <tr>
+                        
+                                <td><input type="text" name="designation1" placeholder="Enter School/University"
+                                    [(ngModel)]="formData.designation1"></td>
+                        
+                                <td> <input type="text" name="organization1" placeholder="Enter School/University"
+                                        [(ngModel)]="formData.organization1"> </td>
+                        
+                                <td> <input type="number" name="doj1" placeholder="Enter Year of Passing"
+                                        [(ngModel)]="formData.doj1"> </td>
+                        
+                                <td> <input type="number" name="dor1" placeholder="Enter Percentage/CGPA"
+                                        [(ngModel)]="formData.dor1"> </td>
+                        
+                            </tr>
+                            <tr>
+                        
+                                <td><input type="text" name="designation2" placeholder="Enter School/University"
+                                    [(ngModel)]="formData.designation2"></td>
+                        
+                                <td> <input type="text" name="organization2" placeholder="Enter School/University"
+                                        [(ngModel)]="formData.organization2"> </td>
+                        
+                                <td> <input type="number" name="doj2" placeholder="Enter Year of Passing"
+                                        [(ngModel)]="formData.doj2"> </td>
+                        
+                                <td> <input type="number" name="dor2" placeholder="Enter Percentage/CGPA"
+                                        [(ngModel)]="formData.dor2"> </td>
+                        
+                            </tr>
+                            <tr>
+                        
+                                <td><input type="text" name="designation3" placeholder="Enter School/University"
+                                    [(ngModel)]="formData.designation3"></td>
+                        
+                                <td> <input type="text" name="organization3" placeholder="Enter School/University"
+                                        [(ngModel)]="formData.organization3"> </td>
+                        
+                                <td> <input type="number" name="doj3" placeholder="Enter Year of Passing"
+                                        [(ngModel)]="formData.doj3"> </td>
+                        
+                                <td> <input type="number" name="dor3" placeholder="Enter Percentage/CGPA"
+                                        [(ngModel)]="formData.dor3"> </td>
+                        
+                            </tr>
+                            <tr>
+                        
+                                <td><input type="text" name="designation4" placeholder="Enter School/University"
+                                    [(ngModel)]="formData.designation4"></td>
+                        
+                                <td> <input type="text" name="organization4" placeholder="Enter School/University"
+                                        [(ngModel)]="formData.organization4"> </td>
+                        
+                                <td> <input type="number" name="doj4" placeholder="Enter Year of Passing"
+                                        [(ngModel)]="formData.doj4"> </td>
+                        
+                                <td> <input type="number" name="dor4" placeholder="Enter Percentage/CGPA"
+                                        [(ngModel)]="formData.dor4"> </td>
+                        
+                            </tr>
+                        
+                        
+                        
+                        </table>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="form-group col-md-12">
+                            <h3><label for="phone">Description</label></h3>
+                            <textarea id="desc" type="text" name="desc" class="form-control"
+                                [(ngModel)]="formData.desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <h3><label for="phone">Declaration</label></h3>
+                            <textarea id="decl" type="text" name="decl" class="form-control"
+                                [(ngModel)]="formData.decl"></textarea>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success m-2">Submit</button>
+                        <button type="reset" class="btn btn-warning m-2">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<app-resume *ngIf="showResume" [formData]="formData" (editInfoEvent)="editinfo($event)"></app-resume>
